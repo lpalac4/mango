@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="obj"
+            type="com.moraware.domain.models.MessageThread" />
+
+        <variable
+            name="viewModel"
+            type="com.moraware.mango.messages.MessagesViewModel" />
+
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="@{() -> viewModel.messageThreadSelected(obj)}"
+        card_view:cardCornerRadius="5dp"
+        card_view:cardElevation="5dp"
+        card_view:cardMaxElevation="0dp"
+        card_view:cardPreventCornerOverlap="false"
+        card_view:cardUseCompatPadding="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp"
+            android:paddingTop="12dp"
+            android:paddingBottom="12dp">
+
+            <ImageView
+                android:id="@+id/message_thread_profile"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:scaleType="centerCrop"
+                app:circularImageUrl="@{viewModel.otherUserProfileUrl(obj)}"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:src="@drawable/profile_placeholder" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/message_thread_sender_name"
+                style="@style/AppTheme.Label.ExtraSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:text="@{viewModel.otherUserName(obj)}"
+                app:layout_constraintStart_toEndOf="@+id/message_thread_profile"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="Ms Cook" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/message_thread_name"
+                style="@style/AppTheme.Label.Small"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:text="@{obj.mealName}"
+                app:layout_constraintStart_toEndOf="@+id/message_thread_profile"
+                app:layout_constraintTop_toBottomOf="@+id/message_thread_sender_name"
+                tools:text="Lasagna" />
+
+            <TextView
+                android:id="@+id/message_thread_sender_date"
+                style="@style/AppTheme.Label.ExtraSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAlignment="viewEnd"
+                app:timeSince="@{obj.lastTimestamp}"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/message_thread_profile"
+                tools:text="12/11/2001" />
+
+            <TextView
+                android:id="@+id/message_thread_preview"
+                style="@style/AppTheme.Label.Small"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="4dp"
+                android:text="@{obj.messageThreadPreview}"
+                android:maxLines="1"
+                app:layout_constraintStart_toEndOf="@+id/message_thread_profile"
+                app:layout_constraintTop_toBottomOf="@+id/message_thread_name"
+                app:layout_constraintEnd_toEndOf="parent"
+                tools:text="Okay you can pick up the meal at 3pm and I'm only asking for a 3 dollars a plate.  Let me know when you're close and I'll give you exact address." />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+</layout>

@@ -1,0 +1,51 @@
+{
+  "project_info": {
+    "project_number": "955692446349",
+    "firebase_url": "https://mango-a180d.firebaseio.com",
+    "project_id": "mango-a180d",
+    "storage_bucket": "mango-a180d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:955692446349:android:bf5259dfbf41d590",
+        "android_client_info": {
+          "package_name": "com.moraware.mango"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "955692446349-hea4pt0knrirt682ug8gqvms5u33g0lq.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.moraware.mango",
+            "certificate_hash": "60815d32a4a751b32a70e14e001fb05ce210d1d0"
+          }
+        },
+        {
+          "client_id": "955692446349-tjcc5u8uh92s0nmbndstvag1thue0vq2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "API_KEY"
+        },
+        {
+          "current_key": "API_KEY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "955692446349-tjcc5u8uh92s0nmbndstvag1thue0vq2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="model"
+            type="com.moraware.mango.createmeal.CreateMealViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingStart="40dp"
+        android:paddingEnd="40dp">
+
+        <com.google.android.material.circularreveal.cardview.CircularRevealCardView
+            android:id="@+id/create_meal_allergens_instructions_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="10dp"
+            app:contentPadding="10dp"
+            app:layout_constraintBottom_toTopOf="@+id/create_meal_allergens_disclaimer"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/create_meal_recipe_allergen_header"
+                style="@style/AppTheme.Label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/create_meal_recipe_allergen_header" />
+        </com.google.android.material.circularreveal.cardview.CircularRevealCardView>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/create_meal_recipe_allergen_soy"
+            style="@style/MangoButtonBackground.TextButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:onClick="@{() -> model.onContainsSoy()}"
+            android:textColor="@{model.containsSoy ? @color/tintActive : @color/tintInactive}"
+            android:text="@string/soy"
+            app:layout_constraintStart_toEndOf="@+id/create_meal_recipe_allergen_shellfish"
+            app:layout_constraintTop_toBottomOf="@+id/create_meal_allergens_instructions_container" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/create_meal_recipe_allergen_shellfish"
+            style="@style/MangoButtonBackground.TextButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:onClick="@{() -> model.onContainsShellfish()}"
+            android:textColor="@{model.containsShellfish ? @color/tintActive : @color/tintInactive}"
+            android:text="@string/shellfish"
+            app:layout_constraintStart_toEndOf="@+id/create_meal_recipe_allergen_eggs"
+            app:layout_constraintTop_toBottomOf="@+id/create_meal_allergens_instructions_container" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/create_meal_recipe_allergen_wheat"
+            style="@style/MangoButtonBackground.TextButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="8dp"
+            android:onClick="@{() -> model.onContainsWheat()}"
+            android:textColor="@{model.containsWheat ? @color/tintActive : @color/tintInactive}"
+            android:text="@string/wheat"
+            app:layout_constraintEnd_toStartOf="@+id/guideline2"
+            app:layout_constraintTop_toBottomOf="@+id/create_meal_allergens_instructions_container" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/create_meal_recipe_allergen_nuts"
+            style="@style/MangoButtonBackground.TextButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:onClick="@{() -> model.onContainsNuts()}"
+            android:textColor="@{model.containsNuts ? @color/tintActive : @color/tintInactive}"
+            android:text="@string/nuts"
+            app:layout_constraintEnd_toStartOf="@+id/create_meal_recipe_allergen_wheat"
+            app:layout_constraintTop_toBottomOf="@+id/create_meal_allergens_instructions_container" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/create_meal_recipe_allergen_dairy"
+            style="@style/MangoButtonBackground.TextButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:onClick="@{() -> model.onContainsDairy()}"
+            android:textColor="@{model.containsDairy ? @color/tintActive : @color/tintInactive}"
+            android:text="@string/dairy"
+            app:layout_constraintEnd_toStartOf="@+id/create_meal_recipe_allergen_nuts"
+            app:layout_constraintTop_toBottomOf="@+id/create_meal_allergens_instructions_container" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/create_meal_recipe_allergen_eggs"
+            style="@style/MangoButtonBackground.TextButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:onClick="@{() -> model.onContainsEggs()}"
+            android:textColor="@{model.containsEggs ? @color/tintActive : @color/tintInactive}"
+            android:text="@string/egg"
+            app:layout_constraintStart_toStartOf="@+id/guideline2"
+            app:layout_constraintTop_toBottomOf="@+id/create_meal_allergens_instructions_container" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/create_meal_allergens_disclaimer"
+            style="@style/AppTheme.Label.ExtraSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="60dp"
+            android:text="@string/create_meal_allergens_disclaimer"
+            android:textAlignment="center"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.5" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

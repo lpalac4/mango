@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="obj"
+            type="com.moraware.domain.models.Order" />
+
+        <variable
+            name="viewModel"
+            type="com.moraware.mango.order.OrderOptionsViewModel" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="8dp"
+        android:paddingTop="12dp"
+        android:paddingEnd="8dp"
+        android:paddingBottom="12dp">
+
+        <FrameLayout
+            android:id="@+id/order_accepted_status_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/order_item_cancel"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.google.android.material.button.MaterialButton
+                style="@style/MangoButtonBackground"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{obj.acceptedStatus ? @string/order_item_confirmed : @string/order_item_requested}"
+                android:enabled="false"
+                android:visibility="@{!viewModel.isChef || viewModel.isChef() &amp; obj.acceptedStatus}" />
+
+            <com.google.android.material.button.MaterialButton
+                style="@style/MangoButtonBackground"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:enabled="@{!obj.acceptedStatus}"
+                android:onClick="@{() -> viewModel.confirmOrderRequest(obj)}"
+                android:text="@{obj.acceptedStatus ? @string/order_item_confirmed : @string/order_item_chef_confirm}"
+                android:visibility="@{viewModel.isChef &amp; !obj.acceptedStatus}" />
+
+        </FrameLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/order_item_cancel"
+            style="@style/MangoButtonBackground.TextButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="@{() -> viewModel.cancelOrderRequest(obj)}"
+            android:text="@string/order_item_cancel"
+            android:visibility="@{viewModel.canCancel(obj)}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/order_patron_name"
+            style="@style/AppTheme.Label"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="@{obj.patronName}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/order_accepted_status_container"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Ms. Cook" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

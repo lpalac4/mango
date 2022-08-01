@@ -1,0 +1,51 @@
+Database models held in No-SQL
+
+User
+    Id
+
+    MealIds
+
+
+Meal
+    Id
+
+    ChefId
+    PatronIds
+
+Chef
+    Id
+
+    MealIds
+
+
+FavoriteMeals
+    UserId
+
+
+Image
+    MealId
+    ChefId,
+
+    UserId
+
+
+LocalMeals
+    MealId
+    ChefId
+    PatronIds
+
+
+MyMeals
+    UserId
+    ChefId
+    MealId
+
+
+Profile
+    UserId
+
+
+FeaturedMeals
+    MealId
+    ChefId
+    PatronIds

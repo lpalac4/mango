@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="obj"
+            type="com.moraware.mango.createmeal.CreateMealPhotoAdapter.PhotoItem" />
+        <variable
+            name="viewModel"
+            type="com.moraware.mango.createmeal.CreateMealViewModel" />
+    </data>
+
+    <FrameLayout
+        android:id="@+id/create_meal_photo_item_container"
+        android:layout_width="@dimen/create_meal_photo_height_width"
+        android:layout_height="@dimen/create_meal_photo_height_width">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/create_meal_recipe_allergen_nuts"
+            style="@style/MangoButtonBackground.TextButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="@{() -> viewModel.onAddPhoto(obj)}"
+            android:text="@string/create_meal_photo_add"
+            android:visibility="@{!obj.deletable}"
+            android:layout_gravity="center" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/create_meal_photo_image0"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:onClick="@{() -> viewModel.onAddPhoto(obj)}"
+            android:scaleType="fitCenter"
+            android:layout_gravity="center"
+            app:photoImage="@{obj.androidUri}" />
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/create_meal_photo_remove"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:drawable/ic_delete"
+            android:onClick="@{() -> viewModel.onRemovePhoto(obj)}"
+            android:visibility="@{obj.deletable}"
+            android:layout_gravity="top|end"/>
+
+    </FrameLayout>
+</layout>

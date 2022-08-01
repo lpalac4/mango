@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.moraware.mango.social.SocialViewModel" />
+    </data>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="8dp">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/social_settings"
+                    style="@style/MangoButtonBackground.TextButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="@{() -> viewModel.showSettings()}"
+                    android:text="@string/social_settings"
+                    android:visibility="@{viewModel.isCurrentUser()}"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/social_profile_image"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_marginTop="24dp"
+                    android:onClick="@{() -> viewModel.onChangePhoto()}"
+                    app:circularImageUrl="@{viewModel.profileImageUrl}"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:src="@drawable/profile_placeholder" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/social_user_name"
+                    style="@style/AppTheme.Label.Header"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:maxLines="1"
+                    android:text="@{viewModel.username}"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/social_profile_image"
+                    tools:text="ProfileUsername" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/social_email"
+                    style="@style/AppTheme.Label.Small"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:text="@{viewModel.email}"
+                    android:visibility="@{viewModel.isCurrentUser()}"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/social_user_name"
+                    tools:text="email@emailprovider.com" />
+
+                <FrameLayout
+                    android:id="@+id/social_actions_container"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/social_email">
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/social_messages"
+                        style="@style/MangoButtonBackground"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:enabled="@{!viewModel.followingDataProcessing}"
+                        android:onClick="@{() -> viewModel.showMessages()}"
+                        android:text="@string/title_messages"
+                        android:textAlignment="center"
+                        android:visibility="@{viewModel.isCurrentUser()}" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/social_friend_follow"
+                        style="@style/MangoButtonBackground"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:onClick="@{() -> viewModel.followUserToggle()}"
+                        android:text="@{viewModel.followStatus}"
+                        android:textAlignment="center"
+                        android:visibility="@{viewModel.showFollowButton}"
+                        tools:text="Following" />
+                </FrameLayout>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/social_about_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:visibility="@{viewModel.showProfile}"
+                    android:onClick="@{() -> viewModel.onChangeBio()}"
+                    app:cardCornerRadius="5dp"
+                    app:cardElevation="5dp"
+                    app:cardMaxElevation="0dp"
+                    app:cardPreventCornerOverlap="false"
+                    app:cardUseCompatPadding="true"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/social_actions_container">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        style="@style/AppTheme.Label"
+                        android:id="@+id/social_about_information"
+                        android:layout_margin="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@{viewModel.profileBio}"
+                        tools:text="@string/long_text_placeholder" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/social_fill_about_info"
+                        style="@style/MangoButtonBackground.TextButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:clickable="false"
+                        android:text="@string/social_about_empty_message"
+                        android:visibility="@{viewModel.profileBio.empty}" />
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.tabs.TabLayout
+                    android:id="@+id/social_followers_meals_tab"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clickable="@{!viewModel.additionalDataProcessing}"
+                    android:visibility="@{viewModel.isCurrentUser()}"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/social_about_container">
+
+                    <com.google.android.material.tabs.TabItem
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/social_tab_favorites" />
+
+                    <com.google.android.material.tabs.TabItem
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/social_tab_meals" />
+                </com.google.android.material.tabs.TabLayout>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/social_followers_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:visibility="@{!viewModel.additionalDataProcessing}"
+                    app:cardCornerRadius="5dp"
+                    app:cardElevation="5dp"
+                    app:cardMaxElevation="0dp"
+                    app:cardPreventCornerOverlap="false"
+                    app:cardUseCompatPadding="true"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/social_followers_meals_tab">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/social_recycler"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="@{viewModel.displayingProfiles}" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/meals_recycler"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="@{viewModel.displayingMeals}" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        style="@style/AppTheme.Label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:padding="10dp"
+                        android:text="@string/social_recycler_empty"
+                        android:visibility="@{viewModel.emptyFollowersMeals}" />
+
+                </com.google.android.material.card.MaterialCardView>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.core.widget.NestedScrollView>
+
+        <include
+            layout="@layout/loading_indicator"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:viewModel="@{viewModel}" />
+    </FrameLayout>
+</layout>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="model"
+            type="com.moraware.mango.createmeal.CreateMealViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.circularreveal.cardview.CircularRevealCardView
+            android:id="@+id/create_meal_description_instructions_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="10dp"
+            app:contentPadding="10dp"
+            android:layout_marginBottom="32dp"
+            app:layout_constraintBottom_toTopOf="@+id/create_meal_description_text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/create_meal_description_instructions"
+                style="@style/AppTheme.Label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/create_meal_description_instructions"
+                android:textAlignment="center" />
+        </com.google.android.material.circularreveal.cardview.CircularRevealCardView>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/create_meal_description_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.google.android.material.textfield.TextInputEditText
+                style="@style/MangoInputTextStyle.MultiLine"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@={model.mealDescription}"
+                tools:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam tristique elit eu ipsum tempus, in tempor ex congue. Nam eu nulla eu nulla laoreet rhoncus uid sit amet nibh. Phasellus gravida iaculis ex ut efficitur. Pellentesque rutrum dictum auctor. Nunc sit amet enim at purus hendrerit tristique quis et lacus. Duis vehicula neque justo. Nam venenatis, quam sed suscipit pharetra, turpis ipsum vulputate neque, eu luctus arcu massa vitae enim. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce quis metus velit.\nMorbi venenatis, nisi rutrum tempus euismod, massa ligula porta tellus, sit amet tristique dui nisi at turpis. Curabitur porttitor malesuada magna et sollicitudin. Cras in turpis et felis fermentum fringilla quis quis nunc. Nullam vel fringilla mauris. Maecenas in ullamcorper mauris. Cras dignissim tempus sem sit amet venenatis. Aliquam accumsan maximus dictum."
+                android:hint="@string/create_meal_description_hint" />
+        </com.google.android.material.textfield.TextInputLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

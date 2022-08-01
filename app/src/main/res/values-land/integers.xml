@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="featured_number_columns">3</integer>
+    <integer name="mymeals_number_columns">3</integer>
+    <integer name="create_meal_photo_columns">6</integer>
+</resources>

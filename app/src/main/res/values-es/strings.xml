@@ -1,0 +1,297 @@
+<resources>
+    <string name="app_name">Mango</string>
+    <string name="loader_logo_text">mango</string>
+    <string name="title_activity_main">Mango</string>
+    <string name="title_order_nearby">Comidas Cercano</string>
+    <string name="title_my_orders">Mi Comida</string>
+    <string name="title_profile">Perfil</string>
+    <string name="title_activity_product">Informacion de Comida</string>
+    <string name="title_featured">Destacados</string>
+    <string name="create_meal">Creear Comida</string>
+    <string name="title_activity_profile">Mi Perfil</string>
+    <string name="tab_layout_chef">Mi Comida</string>
+    <string name="tab_layout_patron">Reservas</string>
+
+    <!-- Strings related to Settings -->
+    <!-- Example General settings -->
+    <string name="pref_header_general">General</string>
+
+    <string name="pref_title_social_recommendations">Enable social recommendations</string>
+    <string name="pref_description_social_recommendations">Recommendations for people to contact
+        based on your message history
+    </string>
+
+    <string name="pref_title_display_name">Display name</string>
+    <string name="pref_default_display_name">John Smith</string>
+
+    <string name="pref_title_add_friends_to_messages">Add friends to messages</string>
+    <string-array name="pref_example_list_titles">
+        <item>Always</item>
+        <item>When possible</item>
+        <item>Never</item>
+    </string-array>
+    <string-array name="pref_example_list_values">
+        <item>1</item>
+        <item>0</item>
+        <item>-1</item>
+    </string-array>
+
+    <!-- Example settings for Data & Sync -->
+    <string name="pref_header_data_sync">Data &amp; sync</string>
+
+    <string name="pref_title_sync_frequency">Sync frequency</string>
+    <string-array name="pref_sync_frequency_titles">
+        <item>15 minutes</item>
+        <item>30 minutes</item>
+        <item>1 hour</item>
+        <item>3 hours</item>
+        <item>6 hours</item>
+        <item>Never</item>
+    </string-array>
+    <string-array name="pref_sync_frequency_values">
+        <item>15</item>
+        <item>30</item>
+        <item>60</item>
+        <item>180</item>
+        <item>360</item>
+        <item>-1</item>
+    </string-array>
+
+    <string-array name="list_preference_entries">
+        <item>Entry 1</item>
+        <item>Entry 2</item>
+        <item>Entry 3</item>
+    </string-array>
+
+    <string-array name="list_preference_entry_values">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+
+    <string-array name="multi_select_list_preference_default_value" />
+
+    <string name="pref_title_system_sync_settings">System sync settings</string>
+
+    <!-- Example settings for Notifications -->
+    <string name="pref_header_notifications">Notificaciones</string>
+
+    <string name="pref_title_new_message_notifications">New message notifications</string>
+
+    <string name="pref_title_ringtone">Ringtone</string>
+    <string name="pref_ringtone_silent">Silent</string>
+
+    <string name="pref_title_vibrate">Vibrate</string>
+
+    <!-- authentication -->
+    <string name="auth_failed">Failed to register your account</string>
+    <string name="title_activity_login">Sign in</string>
+
+    <!-- Strings related to login -->
+    <string name="prompt_email">Correo electrónico</string>
+    <string name="prompt_password">Contraseña</string>
+    <string name="action_sign_in">Registrarse</string>
+    <string name="action_sign_in_short">Registrarse</string>
+    <string name="action_anonymous_sign_in">Continuar como invitado</string>
+    <string name="action_register">Nuevo usuario? Registrate</string>
+    <string name="error_invalid_email">Correo esta tomado</string>
+    <string name="error_invalid_password">Contraseña invalida</string>
+    <string name="error_incorrect_password">Contraseña invalida</string>
+    <string name="error_field_required">Espacio requerido</string>
+    <string name="permission_rationale">"Permiso de acceso a tus contactos requerido"
+    </string>
+    <string name="title_activity_draweractivity">draweractivity</string>
+
+    <string name="navigation_drawer_open">Cajón de navegación abierto</string>
+    <string name="navigation_drawer_close">Cajón de navegación cerrado</string>
+    <string name="nav_header_sign_in">Registrarse</string>
+    <string name="product_header_allergens">Alérgenos</string>
+    <string name="product_header_ingredients">Ingredientes</string>
+    <string name="product_header_description">Descripción</string>
+    <string name="product_header_chef">Acerca de cocinero</string>
+    <string name="product_serves">Servir %1$d</string>
+    <string name="product_orders_claimed">%1$d reclamados</string>
+
+    <string name="order_service_notification_title_template">Orden servicio: %1$s</string>
+
+    <!-- TODO: remove this placeholder text -->
+    <string name="debug_placeholder_long">You said %1$s and lorem
+        ipsum dolor sit amet, consectetur adipiscing elit. Etiam non enim magna. Morbi dictum, velit
+        vel semper venenatis, magna odio volutpat velit, at ullamcorper nulla lacus sed turpis.
+        Pellentesque vitae metus elit, nec tincidunt tellus. Integer sed nisl sem, ullamcorper
+        ornare lacus. Duis ac mauris sed massa congue volutpat. Donec sed erat sit amet turpis
+        viverra rhoncus sit amet nec magna. Donec lacinia ligula at libero volutpat volutpat nec nec
+        tortor.
+    </string>
+
+    <string name="action_share">Share</string>
+    <string name="action_reply">Reply</string>
+
+    <string name="order_helper_notification_title_template">Order helper: %1$s</string>
+
+    <!-- TODO: remove this placeholder text -->
+    <string name="order_helper_notification_placeholder_text_template"></string>
+    <string name="title_activity_maps">Mapa</string>
+    <string name="error_message_starting_app">\"Se produjo un error al intentar autenticarse, intente nuevamente más tarde\"</string>
+    <string name="main_destination_hint">Ingrese su destino.</string>
+    <string name="title_dialog_create_user">Bienvenido a Mango!</string>
+    <string name="image_instructions_dialog_create_user">Añadir foto!</string>
+    <string name="hint_dialog_create_user_firstname">Primer nombre</string>
+    <string name="hint_dialog_create_user_lastname">Appellido</string>
+    <string name="hint_dialog_create_user_address">Direcciones</string>
+    <string name="hint_dialog_create_user_city">Ciudad</string>
+    <string name="hint_dialog_create_user_state">Estado</string>
+    <string name="hint_dialog_create_user_zipcode">Código postal</string>
+    <string name="hint_dialog_create_user_phone">Teléfono</string>
+    <string name="hint_dialog_create_user_username">Nombre de usuario</string>
+    <string name="hint_dialog_create_user_password">Contraseña</string>
+    <string name="hint_dialog_create_user_email">Correo electronico</string>
+    <string name="title_profile_create_image">Agrega una foto a tu perfil</string>
+    <string name="title_profile_chef_title">Para convertirse en chef, proporcione su información a continuación</string>
+    <string name="dialog_create_chef_button">Conviértete en chef!</string>
+    <string name="dialog_create_user_button">No quiero ser cocinero en este momento</string>
+    <string name="dialog_create_user_confirm_button">Crear una cuenta</string>
+    <string name="error_account_validation">Error al crear cuenta. Asegúrese de que su información sea correcta e intente nuevamente.</string>
+    <string name="creation_user_error">Por favor revise los requisitos de la cuenta.</string>
+    <string name="error_register_account">Se ha producido un error al intentar registrar su cuenta.</string>
+    <string name="error_login">Se produjo un error durante el inicio de sesión, intente nuevamente.</string>
+    <string name="third_party_error_login">Se produjo un error durante el inicio de sesión con% 1 $ s, intente nuevamente.</string>
+    <string name="error_retrieving_user">Inicia sesión para ver tus pedidos.</string>
+    <string name="error_retrieving_meals">Error al recuperar los detalles de la comida.</string>
+    <string name="error_pick_image">¡Lo sentimos! Se produjo un error al intentar guardar su imagen.</string>
+    <string name="logout">Cerrar sesión</string>
+    <string name="login_alert">Inicia sesión para ver tus pedidos.</string>
+    <string name="error_logging_out">Se produjo un error al intentar cerrar sesión.</string>
+    <string name="login">Iniciar sesión</string>
+    <string name="settings_terms_of_service">Términos de servicio</string>
+    <string name="settings_privacy_policy">Política de privacidad</string>
+    <string name="settings_about_mango">Sobre Mango</string>
+    <string name="settings_change_password">Cambia la contraseña</string>
+    <string name="settings_notification">Notificaciones</string>
+    <string name="my_meals_no_chef_results">No has compartido tus comidas con nadie, no seas tan tímido.</string>
+    <string name="my_meals_no_order_results">No has probado las comidas de nadie más, no seas tan tímida.</string>
+    <string name="order_action">Ver detalles de la comida</string>
+    <string name="order_number_question">¡Aprendamos lo que %1$s está ofreciendo al mundo, reclame una parte de él! Una vez solicitado, lo confirmarán.</string>
+    <string name="order_confirm_btn">Enviar peticion</string>
+    <string name="order_title">Hacer una solicitud</string>
+    <string name="order_entry_max_formatted">/ %1$d</string>
+    <string name="error_submitting_order">No se pudo reservar tu comida. Intenta nuevamente más tarde.</string>
+    <string name="error_submitting_number_orders">Asegúrese de ingresar un número correcto de pedidos.</string>
+    <string name="create_meal_error">Ha ocurrido un error, intente nuevamente más tarde.</string>
+    <string name="create_meal_photo">¡Déjanos ver tu maravillosa creación!</string>
+    <string name="create_meal_name_hint">¿Cómo se llama este delicioso regalo?</string>
+    <string name="create_meal_name_instructions">Nos encanta la foto, ahora cuéntanos más al respecto</string>
+    <string name="create_meal_description_instructions">Ahora describa su comida\nLe pediremos una lista de ingredientes a continuación.</string>
+    <string name="create_meal_description_hint">Hazlo sabroso</string>
+    <string name="create_meal_recipe_instructions">Ahora los detalles técnicos, ¿qué hay en él?</string>
+    <string name="create_meal_recipe_hint">Agregar ingrediente</string>
+    <string name="create_meal_recipe_allergen_header">¿Algún alérgeno?</string>
+    <string name="create_meal_order_hint">Total de pedidos que puede hacer</string>
+    <string name="create_meal_eta_instructions">¡Buena elección de ingredientes!\nAhora, ¿cuándo estará listo?</string>
+    <string name="create_meal_location_instructions">Por último, pero no menos importante\n¿Dónde pueden los usuarios recoger sus comidas?</string>
+    <string name="create_meal_submit">Enviar</string>
+    <string name="create_meal_continue">Continuar</string>
+    <string name="create_meal_recipe_notice_header">¿Algo más que quieras hacernos saber?</string>
+    <string name="create_meal_notice_hint">Escribe cualquier otra cosa que quieras compartir</string>
+    <string name="create_meal_recipe_disclaimer">Sea lo más detallado posible y no se preocupe por la cantidad.</string>
+    <string name="photo_source_gallery">Galería</string>
+    <string name="photo_source_camera">Camera</string>
+    <string name="insufficient_meal_information">Asegúrese de incluir información suficiente sobre su comida.\nEl nombre de su comida debe tener al menos 2 caracteres\nDebe incluir al menos 1 foto\nDebe incluir al menos 1 ingrediente\nSu descripción debe tener al menos 5 caracteres\nSu comida debe proporcionar al menos 1 orden</string>
+    <string name="settings_check_messages">Mensajes</string>
+    <string name="title_messages">Mensajes</string>
+    <string name="product_message_chef">Mensaje Chef</string>
+    <string name="product_meal_messages">Mensajes</string>
+    <string name="error_loading_messages">Se produjo un error al recuperar sus mensajes. Por favor, inténtelo de nuevo más tarde.</string>
+    <string name="messages_no_results">Sin historial de mensajes</string>
+    <string name="messages_no_threads_results">No tienes mensajes</string>
+    <string name="error_retrieving_orders_for_meal">Se produjo un error al recuperar los pedidos de esta comida. Intenta nuevamente más tarde</string>
+    <string name="error_confirming_order">Se produjo un error al confirmar ese pedido. Por favor, inténtelo de nuevo más tarde.</string>
+    <string name="order_item_confirmed">Confirmado</string>
+    <string name="order_item_requested">Pedido</string>
+    <string name="order_item_chef_confirm">Aceptar petición</string>
+    <string name="product_view_order_requests">Current Orders</string>
+    <string name="orderoptions_get_orders_no_results">Aún no se han realizado solicitudes.</string>
+    <string name="order_number_of_orders">%1$d Pedido</string>
+    <string name="order_item_cancel">Cancelar</string>
+    <string name="error_cancelling_order">Se produjo un error al cancelar su pedido. Inténtalo de nuevo o comunícate con el chef.</string>
+    <string name="message_input_send">Enviar</string>
+    <string name="create_meal_eta_time_hint">Fecha y hora</string>
+    <string name="create_meal_eta_btn">Elegir fecha</string>
+    <string name="create_meal_featured_photo">La mejor foto aquí!</string>
+    <string name="order_item_unknown">Desconocido</string>
+    <string name="search_meals_by_location">Buscar por ubicación</string>
+    <string name="messages_chat_title">Chat</string>
+    <string name="messages_threads_title">Chat de comida</string>
+    <string name="message_unable_to_send">No se puede enviar el mensaje</string>
+    <string name="order_requested_needs_chef_approval">Comida reservada, ahora depende del chef confirmar.</string>
+    <string name="product_close_meal">Eliminar comida</string>
+    <string name="create_meal_allergens_disclaimer">Cualquier información ayuda! No te preocupes si no estás seguro.</string>
+    <string name="error_closing_meal">No se puede cerrar esta comida, intente nuevamente más tarde.</string>
+    <string name="product_meal_closed_success">Esta comida ha sido cerrada, gracias por usar Mango.</string>
+    <string name="change_password_dialog_title">Cambia la contraseña</string>
+    <string name="change_password_confirm">Confirmar</string>
+    <string name="dialog_button_cancel">Cancelar</string>
+    <string name="change_password_dialog_instructions">Para cambiar su contraseña, complete los detalles a continuación.</string>
+    <string name="hint_change_password_email">Email actual</string>
+    <string name="hint_change_password_current_password">Contraseña actual</string>
+    <string name="hint_change_password_new_password">Nueva Contraseña</string>
+    <string name="error_changing_password">No se puede cambiar la contraseña, asegúrese de haber ingresado los datos correctos.</string>
+    <string name="change_password_success">¡Se cambió la contraseña correctamente!</string>
+    <string name="change_password_requirements">Su nombre de usuario debe tener solo letras y números y al menos 6 caracteres.\nSu nueva contraseña debe contener al menos 1 mayúscula, 1 minúscula y 1 número y debe tener al menos 6 caracteres de longitud.</string>
+    <string name="soy">Soja</string>
+    <string name="shellfish">Mariscos</string>
+    <string name="wheat">Trigo</string>
+    <string name="nuts">Nueces</string>
+    <string name="dairy">Lechería</string>
+    <string name="egg">Huevo</string>
+    <string name="create_meal_photo_disclaimer">Sus fotos aparecerán en el orden en que se colocan aquí.</string>
+    <string name="create_meal_recipe_add">Agregar ingrediente</string>
+    <string name="create_meal_recipe_remove">eliminar</string>
+    <string name="create_meal_photo_add">Agregar</string>
+    <string name="webview_confirm">Okay</string>
+    <string name="webview_accept">Confirmar</string>
+
+    <string name="privacy_policy">privacy_policy.html</string>
+    <string name="terms_of_service">terms_of_service.html</string>
+    <string name="title_terms_of_service">Términos de servicio</string>
+    <string name="title_privacy_policy">Política de privacidad</string>
+    <string name="product_request_meal">Solicitar una porción</string>
+    <string name="about_us_confirm">Descartar</string>
+    <string name="about_us_dialog_instructions">Nos encantaría saber de usted, ¡contáctenos!</string>
+    <string name="about_us_our_story">La aplicación Mango te da la libertad de compartir comidas caseras con tu comunidad. Ya sea que tenga restos de comida de una fiesta o desee promover una nueva creación culinaria, Mango está aquí para ayudarlo. La aplicación Mango construye su red al conectarlo con compradores en el área.\n\nCon herramientas que lo dirigen a las fuentes locales de alimentos, la aplicación Mango asegura que sepa exactamente de dónde vendrá su próxima comida. La aplicación Mango ayudará a desarrollar un mercado vibrante en su vecindario al alentar a los miembros a ser tanto vendedores como clientes. Únase a nosotros en nuestra misión de reducir el desperdicio de alimentos, promover la sostenibilidad y desarrollar las economías locales.</string>
+    <string name="twitter_username">MangoMeals</string>
+    <string name="about_us_version">Version: %1$s</string>
+    <string name="social_message_user">Mensaje</string>
+    <string name="long_text_placeholder">A mango is a juicy stone fruit (drupe) produced from numerous species of tropical trees belonging to the flowering plant genus Mangifera, cultivated mostly for their edible fruit.  Most of these species are found in nature as wild mangoes. The genus belongs to the cashew family Anacardiaceae. Mangoes are native to South Asia,[1][2] from where the \"common mango\" or \"Indian mango\", Mangifera indica, has been distributed worldwide to become one of the most widely cultivated fruits in the tropics. Other Mangifera species (e.g. horse mango, Mangifera foetida) are grown on a more localized basis.  Worldwide, there are several hundred cultivars of mango. Depending on the cultivar, mango fruit varies in size, shape, sweetness, skin color, and flesh color which may be pale yellow, gold, or orange.[1] Mango is the national fruit of India and Pakistan, and the national tree of Bangladesh.[3] It is the unofficial national fruit of the Philippines.[4]</string>
+    <string name="social_follower_header">Clientes</string>
+    <string name="social_tab_favorites">Favoritos</string>
+    <string name="social_tab_meals">Comidas</string>
+    <string name="social_follow">Seguir</string>
+    <string name="social_unfollow">Dejar de seguir</string>
+    <string name="error_loading_social_user">Se produjo un error, intente nuevamente más tarde.</string>
+    <string name="social_about_empty_message">Agrega información sobre ti</string>
+    <string name="social_settings">Configuraciones</string>
+    <string name="title_settings">Configuraciones</string>
+    <string name="social_recycler_empty">Nada que ver aqui.</string>
+    <string name="product_loading_error">No se encontró comida.</string>
+    <string name="sign_in_modal_title">Registrarse</string>
+    <string name="sig_in_modal_message">Para continuar usando, inicie sesión en su cuenta o cree una.</string>
+    <string name="sign_in_okay">Okay</string>
+    <string name="sign_in_cancel">Cancelar</string>
+    <string name="error_following">Pedimos disculpas por un error. Intenta seguir a este usuario más tarde.</string>
+    <string name="social_bio_title">Cuéntale al mundo sobre ti</string>
+    <string name="social_bio_feedback">Esto será visible públicamente en su página de perfil.</string>
+    <string name="social_bio_confirm">Confirmar</string>
+    <string name="error_updating_bio">Se produjo un error al actualizar tu biografía. Intenta nuevamente más tarde.</string>
+    <string name="alert_notification_permission_title">Permitir notificaciones</string>
+    <string name="alert_notification_permission_message">Nos gustaría notificarle cuando reciba mensajes directos, seguidores y transacciones.</string>
+    <string name="notification_allow">Permitir</string>
+    <string name="notification_deny">Mas tarde</string>
+    <string name="alert_notification_permission_error">No pudimos habilitar las notificaciones push en este momento. Siempre puedes cambiarlo en Configuración</string>
+    <string name="title_notification">Notificaciones</string>
+    <string name="settings_dark_mode">Tema oscuro</string>
+    <string name="nav_footer_title">Preferencias</string>
+    <string name="nav_footer_about">Hecho con ❤️ por Moraware</string>
+    <string name="error_changing_notification_pref">No se puede establecer la preferencia de notificación.</string>
+
+</resources>

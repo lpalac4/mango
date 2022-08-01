@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:bind="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="com.moraware.mango.mymeals.MyMealsViewModel" />
+    </data>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.coordinatorlayout.widget.CoordinatorLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <com.google.android.material.appbar.AppBarLayout
+                android:id="@+id/appbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.google.android.material.tabs.TabLayout
+                    android:id="@+id/tab_layout_my_meals"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorPrimaryDark"
+                    bind:tabSelectedTextColor="@color/white"
+                    bind:tabIndicatorColor="@color/white"
+                    bind:layout_scrollFlags="scroll|enterAlways">
+
+                    <com.google.android.material.tabs.TabItem
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:text="@string/tab_layout_patron"/>
+
+                    <com.google.android.material.tabs.TabItem
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:text="@string/tab_layout_chef"/>
+                </com.google.android.material.tabs.TabLayout>
+            </com.google.android.material.appbar.AppBarLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/pager_my_meals"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                bind:layout_behavior="@string/appbar_scrolling_view_behavior"/>
+        </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="@{viewModel.noResults}">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:visibility="@{viewModel.onOrdersTab }"
+                android:text="@string/my_meals_no_order_results"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:visibility="@{viewModel.onChefTab}"
+                android:text="@string/my_meals_no_chef_results"/>
+        </FrameLayout>
+
+        <include
+            layout="@layout/loading_indicator"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            bind:viewModel="@{viewModel}" />
+
+    </FrameLayout>
+</layout>

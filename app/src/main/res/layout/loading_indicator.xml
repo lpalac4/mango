@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="com.moraware.mango.base.BaseViewModel"/>
+    </data>
+
+    <FrameLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!-- Login progress -->
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/login_progress"
+            android:layout_width="240dp"
+            android:layout_height="80dp"
+            android:layout_gravity="center"
+            app:gifId="@{viewModel.loadingIndicator}"
+            android:visibility="@{viewModel.processing}" />
+
+    </FrameLayout>
+</layout>

@@ -1,0 +1,20 @@
+package com.moraware.data.entities
+
+data class UserEntity(val id: String = "",
+                      val name: String = "",
+                      val username: String = "",
+                      val email: String = "",
+                      var photoUrl: String = "",
+                      val chef: Boolean = false,
+                      val rating: Int = 0,
+                      val address: String = "",
+                      val city: String = "",
+                      val state: String = "",
+                      val zipCode: String = "",
+                      var thirdPartyToken: String = "",
+                      val followers: Int = 0,
+                      var following: Boolean? = null,
+                      val cookedMeals: List<String> = emptyList(),
+                      val orderedMeals: List<String> = emptyList(),
+                      var notificationTokens: MutableList<String> = mutableListOf(),
+                      var bio: String = "")

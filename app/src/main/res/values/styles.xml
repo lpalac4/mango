@@ -1,0 +1,218 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.DayNight">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+
+        <item name="android:textColorPrimary">@color/labelText</item>
+        <item name="android:textColorHint">@color/colorAccent</item>
+        <item name="colorControlNormal">@color/colorPrimary</item>
+        <item name="colorControlActivated">@color/colorPrimaryDark</item>
+
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="dialogTheme">@style/AppTheme.Dialog</item>
+
+        <!-- enable window content transitions -->
+        <item name="android:windowActivityTransitions">true</item>
+
+        <!-- specify enter and exit transitions -->
+<!--        <item name="android:windowEnterTransition">@transition/explode</item>-->
+<!--        <item name="android:windowExitTransition">@transition/explode</item>-->
+
+        <!-- specify shared element transitions -->
+        <item name="android:windowSharedElementEnterTransition">
+            @transition/change_image_transform</item>
+        <item name="android:windowSharedElementExitTransition">
+            @transition/change_image_transform</item>
+
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat" />
+
+    <style name="ToolBarStyle.Base" parent="">
+        <item name="android:background">?attr/colorPrimaryDark</item>
+        <item name="popupTheme">@style/ThemeOverlay.AppCompat.Light</item>
+        <item name="theme">@style/ThemeOverlay.AppCompat.Dark.ActionBar</item>
+    </style>
+
+    <style name="MangoToolbar" parent="ToolBarStyle.Base"/>
+
+    <style name="ToolBarStyle.Event" parent="MangoToolbar">
+        <item name="titleTextAppearance">@style/MangoToolbar.TextStyle</item>
+    </style>
+
+    <style name="MangoToolbar.TextStyle" parent="TextAppearance.Widget.AppCompat.Toolbar.Title">
+        <!--Any text styling can be done here-->
+        <item name="android:textStyle">normal</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="AppTheme.Dialog" parent="Theme.MaterialComponents.BottomSheetDialog">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+
+        <item name="android:textColorPrimary">@color/labelText</item>
+        <item name="android:textColorHint">@color/colorAccent</item>
+        <item name="colorControlNormal">@color/colorPrimary</item>
+        <item name="colorControlActivated">@color/colorPrimaryDark</item>
+    </style>
+
+    <style name="AppTheme.Dialog.Transparent" parent="AppTheme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowTitleStyle">@null</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>
+        <item name="android:windowSoftInputMode">stateUnspecified|adjustPan</item>
+        <item name="android:backgroundDimEnabled">false</item>
+        <item name="android:background">@android:color/transparent</item>
+    </style>
+
+    <style name="SimpleListTextAppearance">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/labelText</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="ExpandedCollapsingToolbar" parent="@style/TextAppearance.Design.CollapsingToolbar.Expanded">
+        <item name="android:textSize">24sp</item>
+        <item name="android:textColor">@color/transparent</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="CollapsedToolbar" parent="@style/TextAppearance.AppCompat.Title">
+        <item name="android:textSize">24sp</item>
+        <item name="android:textColor">@color/buttonText</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="MangoButtonBackground" parent="@style/Widget.MaterialComponents.Button">
+        <item name="android:textAppearance">@style/MangoButtonTextAppearance</item>
+        <item name="backgroundTint">@color/colorAccent</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">@color/buttonText</item>
+        <item name="cornerRadius">10dp</item>
+    </style>
+
+    <style name="MangoButtonBackground.PrimaryColor" parent="@style/Widget.MaterialComponents.Button">
+        <item name="android:textAppearance">@style/MangoButtonTextAppearance</item>
+        <item name="backgroundTint">@color/colorPrimary</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">@color/buttonText</item>
+        <item name="cornerRadius">10dp</item>
+    </style>
+
+    <style name="MangoButtonBackground.PrimaryColorDark" parent="@style/Widget.MaterialComponents.Button">
+        <item name="android:textAppearance">@style/MangoButtonTextAppearance</item>
+        <item name="backgroundTint">@color/colorPrimaryDark</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">@color/buttonText</item>
+        <item name="cornerRadius">10dp</item>
+    </style>
+
+    <style name="MangoButtonBackground.InverseColors" parent="@style/Widget.MaterialComponents.Button">
+        <item name="android:textAppearance">@style/MangoButtonTextAppearance</item>
+        <item name="backgroundTint">@color/buttonText</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">@color/colorAccent</item>
+        <item name="android:textSize">18sp</item>
+        <item name="cornerRadius">10dp</item>
+    </style>
+
+    <style name="MangoButtonBackground.Outline" parent="@style/Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="android:textAppearance">@style/MangoButtonTextAppearance</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textStyle">normal</item>
+        <item name="cornerRadius">10dp</item>
+        <item name="strokeColor">@color/mtrl_btn_stroke_color_selector</item>
+        <item name="strokeWidth">@dimen/mtrl_btn_stroke_size</item>
+    </style>
+
+    <style name="MangoButtonBackground.TextButton" parent="@style/Widget.MaterialComponents.Button.TextButton">
+        <item name="android:textAppearance">@style/MangoButtonTextAppearance</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textStyle">normal</item>
+        <item name="cornerRadius">10dp</item>
+    </style>
+
+    <style name="MangoButtonBackground.Icon" parent="@style/Widget.MaterialComponents.Button.Icon">
+        <item name="android:textAppearance">@style/MangoButtonTextAppearance</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textStyle">normal</item>
+        <item name="cornerRadius">10dp</item>
+        <item name="strokeColor">@color/mtrl_btn_stroke_color_selector</item>
+        <item name="strokeWidth">@dimen/mtrl_btn_stroke_size</item>
+    </style>
+
+    <style name="MangoButtonTextAppearance" parent="@style/TextAppearance.MaterialComponents.Button">
+        <item name="android:textColor">@color/text_color</item>
+
+    </style>
+
+    <style name="MangoSwitch" parent="@style/Widget.AppCompat.CompoundButton.Switch">
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="AppTheme.Label">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="AppTheme.Label.Title">
+        <item name="android:textSize">24sp</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="AppTheme.Label.Header">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="AppTheme.Label.Small">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="AppTheme.Label.ExtraSmall">
+        <item name="android:textSize">10sp</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="AppTheme.Label.Logo">
+        <item name="android:textSize">50sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="AppTheme.EditText" parent="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="android:textStyle">normal</item>
+        <item name="android:singleLine">true</item>
+    </style>
+
+    <style name="AppTheme.IndeterminateProgressBar" parent="@style/Widget.AppCompat.ProgressBar">
+        <item name="android:indeterminate">true</item>
+        <item name="android:indeterminateDrawable">@drawable/mango_indeterminate_progressbar</item>
+        <item name="android:indeterminateTint">@color/colorAccent</item>
+        <item name="android:indeterminateDuration">3000</item>
+    </style>
+
+    <style name="MangoInputTextStyle" parent="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="android:inputType">textAutoComplete|textCapSentences</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="MangoInputTextStyle.MultiLine" parent="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="android:inputType">textAutoComplete|textCapSentences|textMultiLine</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+</resources>
